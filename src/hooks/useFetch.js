@@ -11,7 +11,7 @@ const useFetch = (baseUrl) => {
         .then(res => setResponse(res.data))
         .catch(err => console.log(err))
     }
-
+    
     //CREATE
     const creatApi = (data) => {
         const url = `${baseUrl}/users/`

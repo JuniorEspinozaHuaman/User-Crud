@@ -1,3 +1,30 @@
+.App {
+    width: 100%;
+}
+
+.App__container {
+    width: 100%;
+    max-width: 87%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3em 0;
+    margin-left: 6.5%;
+}
+
+.App__title {
+    font-size: 3rem;
+}
+
+.App__btn__Create {
+    width: 227px;
+    height: 45px;
+    background-color: #555A88;
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+}
+
 .form__container {
     top: 0;
     left: 0;
@@ -18,5 +45,6 @@
 .user__container {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
+    gap: 3em;
 }

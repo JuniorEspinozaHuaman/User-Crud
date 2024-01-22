@@ -1,24 +1,80 @@
 .user {
     width: 100%;
-    max-width: 350px;
+    max-width: 381px;
     height: 100%;
-    border: 2px solid #aaa5;
+    border: 2px solid #aaa3;
+    padding: 1.2em;
+    border-radius: 0.4em;
+}
+
+.user__title {
+    font-size: 1.5rem;
+    color: #0F0F2D;
+    margin-bottom: 0.4em;
 }
 
 .user__hr {
-    
+    border: 1px solid #aaa2;
 }
 
 .user__list {
     display: grid;
     gap: 0.8em;
+    margin: 0.6em 0;
 }
 
 .user__item {
     display: grid;
-    
+    font-size: 0.9rem;
+
 }
 
 .user__label {
     text-transform: uppercase;
+    color: #D3D3D3;
+    font-weight: 200;
+}
+
+.user__value {
+    display: flex;
+    align-items: center;
+}
+
+.user__value__icon {
+    font-size: 1.2rem;
+    margin-right:0.3em ;
+}
+
+.user__footer {
+    display: flex;
+    margin-top: 0.6em;
+    justify-content: end;
+    column-gap: 0.7em;
+}
+
+.user__btn {
+    display: flex;
+    width: 43px;
+    height: 43px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3em;
+    margin-top: 0.4em;
+}
+
+.user__btn--delete {
+    background-color: #D85D5D;
+    color: white;
+    border: 1px solid #D93F3F;
+
+}
+
+.user__btn--update {
+    background-color: #F6F6F6;
+    color: #BDBDBD;
+    border: 1px solid #BDBDBD;
+}
+
+.user__btn__icon {
+    font-size: 1.5rem;
 }

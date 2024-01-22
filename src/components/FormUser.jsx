@@ -47,7 +47,7 @@ const FormUser = ({ createUser, userUpdate, updateUser, setUserUpdate, setIsForm
   return (
     <form className="form" onSubmit={handleSubmit(submit)}>
       <div className="form__x" onClick={handleExit}>x</div>
-      <h2 className="form__title">{ userUpdate? 'Update User' : 'Create new user'}</h2>
+      <h2 className="form__title">{ userUpdate? 'Update User' : 'New user'}</h2>
       <label className="form__label">
         <span className="form__field__name">Email</span>
         <input className="form__field" {...register('email')} type="email" />

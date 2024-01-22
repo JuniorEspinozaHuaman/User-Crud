@@ -1,19 +1,27 @@
 import './styles/UserCard.css'
-const UserCard = ({ user, deleteUser, setUserUpdate, setIsFormClose }) => {
-const handleDelete = () => {
-    deleteUser(user.id)
-}
+const UserCard = ({ user, deleteUser, setUserUpdate, setIsFormClose, setIsHover, isHover}) => {
 
-const handleEdit = () => {
-    setUserUpdate(user)
-    setIsFormClose(false)
-}
+    const handleDelete = () => {
+        deleteUser(user.id)
+    }
 
+    const handleEdit = () => {
+        setUserUpdate(user)
+        setIsFormClose(false)
+    }
+   
+    const handleHover = () => {
+        setIsHover(true)
+    }
+        
+    const handleNoHover = () => {
+        setIsHover(false)
+    }
 
     return (
         <article className='user'>
             <h2 className='user__title'>{user.first_name} {user.last_name}</h2>
-            <hr className='user__hr'/>
+            <hr className='user__hr' />
             <ul className='user__list'>
                 <li className='user__item'>
                     <span className='user__label'>Email</span>
@@ -21,13 +29,17 @@ const handleEdit = () => {
                 </li>
                 <li className='user__item'>
                     <span className='user__label'>Birthday</span>
-                    <span className='user__value'>{user.birthday}</span>
+                    <span className='user__value'><i className='bx bx-gift user__value__icon'></i> {user.birthday}</span>
                 </li>
             </ul>
-            <hr className='user__hr'/>
+            <hr className='user__hr' />
             <footer className='user__footer'>
-                <button onClick={handleDelete}><i className='bx bx-trash user__btn__delete'>delete</i></button>
-                <button onClick={handleEdit}><i className='bx bx-edit-alt user__btn__update'>update</i></button>
+                <button className='user__btn user__btn--delete' onClick={handleDelete} onMouseEnter={handleHover} onMouseLeave={handleNoHover}>
+                    <i className={`bx bx-trash ${isHover ? 'bx-tada' : ''} user__btn__icon`}></i>
+                </button>
+                <button className='user__btn user__btn--update' onClick={handleEdit} >
+                    <i className='bx bx-edit-alt user__btn__icon'></i>
+                </button>
             </footer>
         </article>
     )
