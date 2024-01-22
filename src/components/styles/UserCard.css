@@ -1,0 +1,24 @@
+.user {
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    border: 2px solid #aaa5;
+}
+
+.user__hr {
+    
+}
+
+.user__list {
+    display: grid;
+    gap: 0.8em;
+}
+
+.user__item {
+    display: grid;
+    
+}
+
+.user__label {
+    text-transform: uppercase;
+}
