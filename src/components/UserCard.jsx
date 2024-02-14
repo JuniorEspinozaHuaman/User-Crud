@@ -11,9 +11,12 @@ const UserCard = ({ user, deleteUser, setUserUpdate, setIsFormClose, setIsHover,
     }
    
     const handleHover = () => {
-        setIsHover(true)
-    }
+        setIsHover(user.id)
         
+    }
+    // console.log(user.id);  
+    // console.log(isHover);
+    
     const handleNoHover = () => {
         setIsHover(false)
     }
@@ -35,7 +38,7 @@ const UserCard = ({ user, deleteUser, setUserUpdate, setIsFormClose, setIsHover,
             <hr className='user__hr' />
             <footer className='user__footer'>
                 <button className='user__btn user__btn--delete' onClick={handleDelete} onMouseEnter={handleHover} onMouseLeave={handleNoHover}>
-                    <i className={`bx bx-trash ${isHover ? 'bx-tada' : ''} user__btn__icon`}></i>
+                    <i className={`bx bx-trash ${user.id === isHover? 'bx-tada' : ''} user__btn__icon`}></i>
                 </button>
                 <button className='user__btn user__btn--update' onClick={handleEdit} >
                     <i className='bx bx-edit-alt user__btn__icon'></i>
