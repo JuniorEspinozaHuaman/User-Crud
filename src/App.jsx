@@ -10,7 +10,7 @@ function App() {
   const [isFormClose, setIsFormClose] = useState(true)
   const [isHover, setIsHover] = useState(false)
 
-  const baseUrl = 'https://users-crud.academlo.tech'
+  const baseUrl = 'https://user-crud-app-2p8c.onrender.com'
   const [users, getUser, createUser, deleteUser, updateUser] = useFetch(baseUrl)
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function App() {
   const handleOpenForm = () => {
     setIsFormClose(false)
   }
-
+console.log(users);
   return (
     <div className='App'>
       <div className='App__container'>

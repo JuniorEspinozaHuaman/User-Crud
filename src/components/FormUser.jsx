@@ -25,8 +25,8 @@ const FormUser = ({ createUser, userUpdate, updateUser, setUserUpdate, setIsForm
     reset({
       email:'',
       password:'',
-      first_name: '',
-      last_name: '',
+      firstName: '',
+      lastName: '',
       birthday:''
     })
     setIsFormClose(true)
@@ -37,8 +37,8 @@ const FormUser = ({ createUser, userUpdate, updateUser, setUserUpdate, setIsForm
     reset({
       email:'',
       password:'',
-      first_name: '',
-      last_name: '',
+      firstName: '',
+      lastName: '',
       birthday:''
     })
     setUserUpdate()
@@ -58,11 +58,11 @@ const FormUser = ({ createUser, userUpdate, updateUser, setUserUpdate, setIsForm
       </label>
       <label className="form__label">
         <span className="form__field__name">First name</span>
-        <input className="form__field" {...register('first_name')} type="text" />
+        <input className="form__field" {...register('firstName')} type="text" />
       </label>
       <label className="form__label">
         <span className="form__field__name">Last name</span>
-        <input className="form__field" {...register('last_name')} type="text" />
+        <input className="form__field" {...register('lastName')} type="text" />
       </label>
       <label className="form__label">
         <span className="form__field__name">Birthday</span>

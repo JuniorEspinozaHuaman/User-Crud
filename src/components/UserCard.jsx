@@ -23,7 +23,7 @@ const UserCard = ({ user, deleteUser, setUserUpdate, setIsFormClose, setIsHover,
 
     return (
         <article className='user'>
-            <h2 className='user__title'>{user.first_name} {user.last_name}</h2>
+            <h2 className='user__title'>{user.firstName} {user.lastName}</h2>
             <hr className='user__hr' />
             <ul className='user__list'>
                 <li className='user__item'>
